@@ -1,0 +1,65 @@
+
+CREATE TABLE FOODS(
+    FID BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY
+    ,FOODNAME VARCHAR(255)
+    ,PRICE DECIMAL(5,2)
+    ,PROTEIN DECIMAL (5,2)
+    ,CARBS DECIMAL (5,2)
+    ,FAT DECIMAL (5,2)
+    ,KETO VARCHAR(1) NULL
+    ,PALEO VARCHAR(1) NULL
+    ,ATKINS VARCHAR(1) NULL
+    ,DUKAN VARCHAR(1) NULL
+);
+
+CREATE TABLE PURCHASES(	
+    PID BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY
+    ,UID BIGINT
+    ,FID BIGINT
+    ,POINTSGAINED INT
+    ,POINTTOTAL INT
+);
+
+
+INSERT INTO FOODS (FOODNAME, PRICE, PROTEIN, CARBS, FAT, KETO, PALEO, ATKINS, DUKAN)
+VALUES ('Almonds', 6.13, 6 ,6, 14, 'x', 'x', 'x', NULL), 
+('Apple', 1.2, 0.5 ,25, 0, NULL, 'x', NULL, NULL), 
+('Asparagus', 3.29, 0.4 ,3.7, 0.2, NULL, 'x', 'x', NULL), 
+('Avacado', 2.99, 3 ,13, 22, 'x', NULL, 'x', NULL), 
+('Bacon', 3.58, 3 ,0.1, 3.3, 'x', 'x', 'x', NULL), 
+('Banana', 0.71, 1.3 ,28, 0, NULL, 'x', NULL, NULL), 
+('Blueberry', 2.99, 1 ,14, 0.5, 'x', 'x', NULL, NULL), 
+('Broccoli', 3.98, 4.2 ,6, 0.4, 'x', 'x', 'x', 'x'), 
+('Butter', 4.18, 0.1 ,0, 4.1, 'x', NULL, 'x', NULL), 
+('Cabbage', 1.58, 0.3 ,5.2, 0.1, 'x', 'x', 'x', 'x'), 
+('Carrot', 1.98, 0.6 ,12, 0.3, 'x', NULL, NULL, 'x'), 
+('Cashews', 9.98, 5 ,7.8, 14, 'x', 'x', 'x', NULL), 
+('Cauliflower', 3.99, 11 ,5.3, 0.3, 'x', 'x', 'x', 'x'), 
+('Cherries', 3.88, 1.6 ,22, 0.3, NULL, 'x', NULL, NULL), 
+('Chicken', 11.36, 38 ,0, 3.6, 'x', 'x', 'x', 'x'), 
+('Cucumber', 0.72, 3 ,2.9, 0.2, NULL, NULL, 'x', 'x'), 
+('Eggplant', 2.06, 0.8 ,4.8, 0.1, NULL, NULL, 'x', 'x'), 
+('Eggs', 3.89, 6 ,0.4, 4.8, 'x', 'x', 'x', 'x'), 
+('Grape', 4.98, 0.6 ,16, 0.3, NULL, 'x', NULL, NULL), 
+('Greek Yogurt', 3.54, 17 ,7.8, 5, 'x', NULL, NULL, NULL), 
+('Ground Beef', 4.68, 65 ,0, 21, 'x', 'x', 'x', 'x'), 
+('Ground Turkey', 3.17, 22 ,0, 10, 'x', 'x', 'x', 'x'), 
+('Kale', 2.94, 2.9 ,0.9, 0.3, 'x', 'x', 'x', 'x'), 
+('Kiwi', 0.89, 0.8 ,20, 0.9, NULL, 'x', NULL, NULL), 
+('Lettuce', 3.18, 0.5 ,1, 0, 'x', 'x', 'x', 'x'), 
+('Lobster', 19.99, 28 ,0, 1.2, 'x', NULL, 'x', 'x'), 
+('Mango', 1.19, 2.8 ,30, 1, NULL, 'x', NULL, NULL), 
+('Mushrooms', 3.74, 0.6 ,2.3, 0.2, 'x', NULL, 'x', 'x'), 
+('Onion', 1.21, 1.2 ,15, 0.2, 'x', 'x', 'x', 'x'), 
+('Pecans', 8.98, 9 ,4, 20, 'x', 'x', 'x', NULL), 
+('Pickles', 4.89, 0.2 ,0.8, 0.1, 'x', NULL, 'x', NULL), 
+('Pineapple', 3.22, 4.9 ,10, 0.2, NULL, 'x', NULL, NULL), 
+('Pork Steak', 7.56, 43 ,0, 16, 'x', 'x', 'x', 'x'), 
+('Shrimp', 5.84, 24 ,0.2, 0.3, 'x', 'x', 'x', 'x'), 
+('Sliced Ham', 4.38, 9.3 ,2.1, 4, 'x', 'x', 'x', 'x'), 
+('Sliced Turkey', 3.98, 4.8 ,1.1, 0.5, 'x', 'x', 'x', 'x'), 
+('Spinach', 4.98, 0.9 ,1.1, 0.1, 'x', 'x', 'x', 'x'), 
+('Squash', 1.59, 1.4 ,2.6, 0.3, 'x', 'x', 'x', 'x'), 
+('Steak', 20.36, 62 ,0, 11, 'x', 'x', 'x', 'x'), 
+('Strawberry', 5.99, 0.7 ,12, 0.5, 'x', 'x', NULL, NULL);
+

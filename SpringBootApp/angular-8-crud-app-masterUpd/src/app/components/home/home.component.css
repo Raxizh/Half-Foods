@@ -1,0 +1,32 @@
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+  /*background-image: url('https://scx1.b-cdn.net/csz/news/800/2017/theoreticala.jpg');*/
+  /*background-image: url('../../../assets/img/healthy-foods.jpg');*/
+  background-image: url('../../../assets/img/pexels-lukas-616401.jpg');
+  min-height: 100%;
+  min-width: 100%;
+  background-position:cover;
+  background-size: cover;
+}
+.w3-animate-top{position:relative;animation:animatetop 3s}@keyframes animatetop{from{top:-1000px;opacity:0} to{top:0;opacity:100}}
+.w3-display-middle {
+  background-color: rgb(127, 218, 86);
+  border:3px solid #7A7A7A;
+  border-radius:10px;
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  margin: 0;
+}
+.w3-display-topleft {
+	position:absolute;
+	left:500;
+}
+
+.w3-jumbo {
+  font-size: 64px !important;
+  text-align: center;
+}

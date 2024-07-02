@@ -1,0 +1,63 @@
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+  /*background-image: url('https://scx1.b-cdn.net/csz/news/800/2017/theoreticala.jpg');*/
+  /*background-image: url('../../../assets/img/healthy-foods.jpg');*/
+  /*background-image: url('../../../assets/img/pexels-lukas-616401.jpg');*/
+  min-height: 100%;
+  min-width: 100%;
+  background-position:cover;
+  background-size: cover;
+}
+.w3-animate-left{position:relative;animation:animateleft 3s}@keyframes animatetop{from{top:-1000px;opacity:0} to{top:0;opacity:100}}
+.w3-animate-right{position:relative;animation:animateright 3s}@keyframes animatetop{from{top:-1000px;opacity:0} to{top:0;opacity:100}}
+
+.green-boxes {
+  background-color: rgb(127, 218, 86);
+  border:3px solid #7A7A7A;
+  border-radius:10px;
+  position: relative;
+  margin: auto;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  width: 60%;
+  
+}
+
+.output {
+  font-size: 30px;
+  text-align:center;
+  margin: 30px;	
+}
+
+.w3-jumbo {
+  font-size: 64px !important;
+}
+
+.center-image{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.center-table {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.center-button {
+
+  margin: 0;
+  position: absolute;
+  Left: 50%;
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+
+}
+
+.green-boxes-text {
+  font-size: 30px;
+  text-align:center;
+}

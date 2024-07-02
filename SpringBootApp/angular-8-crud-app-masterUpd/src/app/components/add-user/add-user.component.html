@@ -1,0 +1,60 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<div class="submit-form">
+  <div *ngIf="!submitted">
+    <div class="form-group">
+      <label for="username">  Email  <span class="text-muted"> </span> </label>
+      <input  type="text" class="form-control" id="email" [(ngModel)]="user.email" name="email" required>
+      <div class="invalid-feedback" style="width: 100%;">
+            Email is required
+          </div>
+    </div>
+
+    <div class="form-group">
+      <label for="phone_num">Phone Number</label>
+      <input
+      	placeholder="###-###-####"
+        class="form-control"
+        id="phone_num"
+        required
+        [(ngModel)]="user.phone_num"
+        name="phone_num"
+      />
+    </div>
+    <div class="form-group">
+      <label for="password">Password </label>
+      <input
+      	placeholder="Must be 8-40 characters long"
+        class="form-control"
+        id="password"
+        type="password"
+        required
+        [(ngModel)]="user.password"
+        name="password"
+      />
+    </div>
+    <div class="form-group">
+      <label for="calcount">Calorie Count</label>
+      <input placeholder="500 - 5000"class="form-control" id="calcount" required [(ngModel)]="user.calcount" name="calcount"/>
+    </div>
+    <div class="form-group-dd">
+      <label for="diet"> Choose a diet </label>
+      <select id="diet" name="diet" class="form-control" required [(ngModel)]="user.diet">
+      	<option value=""> Please select a diet </option>
+      	<option value="Keto"> Keto </option>
+      	<option value="Paleo"> Paleo </option>
+      	<option value="Atkins"> Atkins </option>
+      	<option value="Dukan"> Dukan </option>
+      </select>
+     
+    </div>
+
+    <button (click)="saveUser()" class="btn btn-success">Submit</button>
+  </div>
+
+  <div *ngIf="submitted">
+    <h4>You sucessfully registered! </h4>
+    
+  </div>
+</div>
+

@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+    	<img src="../../../assets/img/half_foods.png" class="center-image">
+
+    <div class = "green-boxes w3-animate-left"><h1 class="green-boxes-text"> Products Purchased </h1></div>
+
+  <table class="center-table w3-animate-right">
+	<tr *ngFor="let food of foods">
+		<td> {{food.foodname}} </td>
+		<td> {{food.paleo}} </td>
+</table>
+
+<div class = "green-boxes w3-animate-left"><h1 class = "green-boxes-text"> Total Points </h1></div>
+<h1 class = "output w3-animate-right"> [number] </h1>
+<div class = "green-boxes w3-animate-left"><h1 class = "green-boxes-text"> Purchase an Item </h1></div>
+<div>
+
+<form action="" id="formvalidate">
+	<div class="input-group">
+		<input type="text" class="form-control" placeholder="" id="foodname-input" #foodname
+           (keydown.enter)="this.foodService.getFoodByName(foodname)"/>
+       </div>
+       </form>
+       <div class="center-button"><button type="submit" id="foodname-submit" (click) ="this.foodService.getFoodByName(foodname.value)"> Submit </button></div>
+      
+   </div>
+  
+<br><br>   
+<div class = "green-boxes w3-animate-left"><h1 class="green-boxes-text"> Points Increased By: </h1></div>
+<h1 class = "output w3-animate-right"> [number] </h1> 

@@ -1,0 +1,62 @@
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Login form with JavaScript Validation</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+<div class="logo text-center">
+  <h1>Logo</h1>
+</div>
+<div class="wrapper">
+  <div class="inner-warpper text-center">
+    <h2 class="title">Login to your account</h2>
+    <form action="" id="formvalidate">
+      <div class="input-group">
+      
+      
+        <input type="text" class="form-control" placeholder="" id="email-input" #email
+           (keydown.enter)="this.userService.login(email.value, password.value)"/>
+       
+        <span class="lighting"></span>
+      </div>
+      <div class="input-group">
+        <input type="password" class="form-control" placeholder="" id="password-input" #password  
+         (keydown.enter)="this.userService.login(email.value, password.value)">
+         <!--<span class="eyeicon" (click)="viewpass()"> <i [ngClass]="visible?'fa fa-eye-':'fa fa-eye-slash'" > </i> -->
+         
+         
+        
+        
+        <span class="lighting"></span>
+      </div> 
+     
+      <button type="submit" id="login-submit" (click)="this.userService.login(email.value, password.value)"> Login</button>
+      <!--<button type="submit" id="login-submit" (click)="clickMethod(username.value, password.value)"> Login</button>-->
+      
+            
+      
+      <!--<div *ngIf="this.userService.authenticated" then redirect()>-->
+      <div *ngIf="this.userService.authenticated; then callfunction; else nofunction"> </div>
+      <ng-template #callfunction>
+      	{{ redirect() }}
+      </ng-template>
+      <ng-template #nofunction>
+      </ng-template>
+      <div class="clearfix supporter">
+        <div class="pull-left remember-me">
+          <input id="rememberMe" type="checkbox">
+          <label for="rememberMe">Remember Me</label>
+        </div>
+        <a class="forgot pull-right" href="#">Forgot Password?</a>
+      </div>
+    </form>
+  </div>
+  <div class="signup-wrapper text-center">
+    <a href="/registeruser">Don't have an account? <span class="text-primary">Create One</span></a>
+  </div>
+</div>
+
+
+</html>

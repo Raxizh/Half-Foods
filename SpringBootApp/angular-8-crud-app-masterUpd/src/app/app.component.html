@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+  <nav class="navbar navbar-expand navbar-light" style="background-color: #00A885;">
+    <div class="navbar-nav mr-auto">
+    <a class="navbar-brand" routerLink="/home">
+    	<img src="../assets/img/half_foods.png" alt="..." height="36"> 
+    	</a>
+      <li class="nav-item">
+      	<a routerLink="/home" class="nav-link"> Half Foods</a>
+      </li>
+      
+      <li class="nav-item"><a routerLink="/about" class="nav-link"> About Us </a></li>
+      <!--<li class="nav-item"><a *ngIf="loginCheck()" routerLink="this"(click)="this.logoutService.logout()" class="nav-link">Log Out</a></li>-->
+      
+     	<!-- Add an *ngIf authenticated, show user button/user settings etc...-->
+     	
+    </div>
+    <div class="ms-auto" *ngIf="!loginCheck()">
+    <div class="dropdown">
+      	<button class="dropbtn"> Account </button>
+      	<div class="dropdown-content">
+      		<a routerLink="/login"> Login </a>
+      		<a routerLink="/registeruser"> Sign Up </a> <!--Need to add link to user's settings page here' -->
+  		</div>
+    </div>
+    </div>
+    
+    <div class="ms-auto" *ngIf="loginCheck()">
+    	<div class="dropdown">
+      	<button class="dropbtn"> Hello, {{this.userService.getUser()}} </button>
+      	<div class="dropdown-content">
+      		<a routerLink="/userhome"> My Rewards </a>
+      		<a routerLink="/home"> Account Settings </a> <!--Need to add link to user's settings page here' -->
+      		<a routerLink="this" (click)="this.logoutService.logout()" class="nav-link"> Logout </a>
+      		</div>
+  		</div>
+	</div>
+    
+  </nav>
+
+  <div class="container mt-3">
+    <router-outlet></router-outlet>
+  </div>
+
+
+
