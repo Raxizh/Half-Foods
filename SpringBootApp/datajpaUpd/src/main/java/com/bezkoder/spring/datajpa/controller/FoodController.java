@@ -22,7 +22,7 @@ import java.util.List;
 
 
 
-@CrossOrigin(origins = "http://localhost:8081")
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping(
 		value="/api",
