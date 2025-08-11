@@ -6,6 +6,14 @@ a. If not imported, go to top right -> import from folder/archive ->
 …/Half_Foods/SpringBootApp/datajpaUpd
 b. After importing, open pom.xml before running
 3. Right click on datajpaUpd and select -> run as -> Spring Boot Application
+4. Navigate to ../SpringBootApp/angular-8-crud-app-masterUpd
+5. Run `npm install --legacy-peer-deps`
+6. Run the Spring Boot project
+7. Run `ng serve --open`
+8. Navigate to `localhost:8080/h2-ui` (in-memory h2 database), change URL and drive to this:
+<img width="1912" height="525" alt="image" src="https://github.com/user-attachments/assets/50317939-2b85-465e-a6d1-c89919bda6c3" />
+9. Ensure that your angular is running on port 4200, if it is not, change CrossOrigin in FoodController.java and UserController.java to your angular port
+
 
 - Angular version
 - 
