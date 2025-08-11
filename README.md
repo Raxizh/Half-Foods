@@ -6,6 +6,10 @@ a. If not imported, go to top right -> import from folder/archive ->
 …/Half_Foods/SpringBootApp/datajpaUpd
 b. After importing, open pom.xml before running
 3. Right click on datajpaUpd and select -> run as -> Spring Boot Application
+4. Navigate to ../SpringBootApp/angular-8-crud-app-masterUpd
+5. Run `npm install --legacy-peer-deps`
+6. Run the Spring Boot project
+7. Run `ng serve --open`
 
 - Angular version
 - 
